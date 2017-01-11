@@ -6734,22 +6734,22 @@ eth_bridge_client_rt_info* IPACM_Lan::eth_bridge_get_client_rt_info_ptr(uint8_t 
 	{
 		if(iptype == IPA_IP_v4)
 		{
-			result = (void*)((void*)eth_bridge_lan_client_rt_from_lan_info_v4 + index * client_rt_info_size_v4);
+			result = (void*)((void*)eth_bridge_lan_client_rt_from_lan_info_v4);
 		}
 		else
 		{
-			result = (void*)((void*)eth_bridge_lan_client_rt_from_lan_info_v6 + index * client_rt_info_size_v6);
+			result = (void*)((void*)eth_bridge_lan_client_rt_from_lan_info_v6);
 		}
 	}
 	else
 	{
 		if(iptype == IPA_IP_v4)
 		{
-			result = (void*)((void*)eth_bridge_lan_client_rt_from_wlan_info_v4 + index * client_rt_info_size_v4);
+			result = (void*)((void*)eth_bridge_lan_client_rt_from_wlan_info_v4);
 		}
 		else
 		{
-			result = (void*)((void*)eth_bridge_lan_client_rt_from_wlan_info_v6 + index * client_rt_info_size_v6);
+			result = (void*)((void*)eth_bridge_lan_client_rt_from_wlan_info_v6);
 		}
 	}
 	return (eth_bridge_client_rt_info*)result;
